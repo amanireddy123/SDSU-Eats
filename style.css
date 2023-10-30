@@ -1,0 +1,557 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.html {
+  font-size: 62.5%;
+}
+body {
+
+  font-family: "Poppins", sans-serif;
+}
+/* ///////////..utility classes../////////// */
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+.btn-primary {
+  color: #fff;
+  background: #16a083;
+}
+.btn-primary:hover {
+  background: #117964;
+  transition: background 0.3s ease-in-out;
+}
+/* ............/navbar/............ *
+/* desktop mode............/// */
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.85;
+  height: 50px;
+  z-index: 12;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+.menu-items {
+  order: 2;
+  display: flex;
+}
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.menu-items a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+.menu-items a:hover {
+  color: #117964;
+  transition: color 0.3s ease-in-out;
+}
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/*showcase-area*/
+
+.showcase-area {
+  height: 80vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.04),
+      rgba(255, 255, 255, 0.336)
+  ),
+    url("images/background2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.starbucks-area {
+    height: 80vh;
+    background: linear-gradient(
+        rgba(240, 240, 240, 0.04),
+        rgba(255, 255, 255, 0.336)
+      ),
+      url("images/sturbucks.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.6rem;
+  }
+  .main-title {
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    color: #f5f5fa;
+  }
+
+  /* .........../Food Menu/............ */
+.food-menu-heading {
+    text-align: center;
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: #666;
+  }
+  .food-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px;
+  }
+  .food-menu-container img {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .food-menu-item {
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+  }
+  .food-description {
+    margin: auto 1.5rem;
+  }
+  .font-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #444;
+  }
+  .food-description p {
+    font-size: 1.4rem;
+    color: #555;
+    font-weight: 500;
+  }
+  .food-description .food-price {
+    color: #117964;
+    font-weight: 700;
+  }
+
+
+  .food-order-options {
+    display: flex;
+    flex-direction: column; /* Stack buttons and item count vertically */
+    align-items: flex-end; /* Align to the right */
+}
+
+.food-order-options .add-to-cart {
+    background-color: #16a083;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.food-order-options .add-to-cart:hover {
+    background: #117964;
+}
+
+.food-description {
+  margin: 0 1.5rem;
+}
+
+.food-description .food-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #444;
+    width: 200px;
+    margin-top: 10px; /* Add margin to the top of the food title */
+}
+
+  /*///////////////*/
+  /* ... existing CSS ... */
+
+/* Set the background color of the section to black */
+#food-menu {
+    background-color: black;
+    padding: 2rem 0;
+}
+
+.food-menu-item {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly horizontally */
+  align-items: flex-start; /* Align items to the top vertically */
+  margin-bottom: 3rem;
+  padding: 0 10px; /* Add horizontal padding */
+}
+
+.food-menu-container {
+    justify-content: space-between; /* Distribute the items evenly */
+}
+
+.food-menu-item {
+    flex: 1 1 calc(50% - 1rem); /* Adjust the flex basis to fit two items per row */
+    box-sizing: border-box;
+    padding: 1rem;
+    color: white;  /* Change font color to white to make it visible against black background */
+}
+
+.food-description p, .food-titile {
+    color: white; /* Change font color to white */
+}
+
+/* ... rest of your CSS ... */
+
+/* Restaurant List */
+.restaurant-list-heading {
+    text-align: center;
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: #666;
+    padding: 2rem 0;
+}
+
+.restaurant-list-container {
+    padding: 20px 0;
+}
+
+.restaurant-item {
+    display: flex;
+    align-items: center; /* To vertically center-align the image with the text */
+    margin-bottom: 2rem;
+    padding: 10px;
+    border: 1px solid #e0e0e0; /* Optional: You can add a border to each restaurant item */
+    border-radius: 5px;       /* Optional: Rounded corners for the border */
+}
+
+.restaurant-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 20px;
+}
+
+.restaurant-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #444;
+    margin: 0;
+}
+
+.restaurant-description p {
+    font-size: 1.4rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.restaurant-location {
+    color: #117964;
+    font-weight: 700;
+}
+
+
+  /* ......//about us//...... */
+  #about {
+    padding: 50px 0;
+    background: #f5f5f7;
+  }
+  .about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #about h2 {
+    font-size: 2.3rem;
+  }
+  #about p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  #about .small {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 600;
+  }
+  .about-img {
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+  }
+  @keyframes about-img-animation {
+    100% {
+      transform: translate(0);
+    }
+  }
+  .about-text {
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translate(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+  }
+  @keyframes about-text-animation {
+    100% {
+      transform: translate(0);
+    }
+  }
+  .about-img img {
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+  }
+
+
+   /***reviews**/
+   .reviews-container {
+    display: flex;
+    justify-content: space-between;  /* Even spacing between reviews */
+    padding: 10px;
+}
+
+.review-section {
+    flex: 1;  /* Allow reviews to grow and take up equal width */
+    border: 1px solid #e0e0e0;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;  /* Optional: A bit of spacing between reviews */
+}
+
+.customer-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+}
+
+.star-rating {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #f5a623;
+}
+
+.review-message {
+    font-size: 16px;
+    color: #333;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.phone {
+    font-family: 'Courier New', Courier, monospace;  /* Different font style for phone */
+    margin: 0;
+}
+
+.email {
+    font-family: 'Arial', sans-serif;  /* Different font style for email */
+    margin: 0;
+}
+
+.phone span, .email span {
+    color: #f5a623;  /* Highlight color for phone and email details */
+}
+
+.copyright {
+    margin-right: 20px;
+}
+
+
+/* Style for the cart panel */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-width: 300px;
+  display: none;
+}
+
+/* Style for the cart content */
+.cart-content {
+  text-align: left;
+}
+
+/* Style for the checkout button */
+#checkout-button {
+  background-color: #16a083;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+#checkout-button:hover {
+  background: #117964;
+}
+
+
+ /* Add your CSS styles here */
+ .orders-header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.completed-orders, .recent-orders {
+  background-color: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.completed-orders h2, .recent-orders h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.order-item {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.order-description {
+  font-size: 16px;
+}
+
+/* Highlight completed orders */
+.completed-orders {
+  background-color: #d3ffd3; /* Light green background */
+}
+
+/* Highlight ongoing orders */
+.recent-orders {
+  background-color: #ffd3d3; /* Light red background */
+}
+
+.payment-methods {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+}
+
+.payment-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 20px;
+}
+
+.payment-card img {
+  max-width: 100px;
+}
+
+.payment-card h2 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.payment-card p {
+  font-size: 1rem;
+}
+
+.select-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+/**end of review*/
+  /***end of about us*/
+/* .image{
+    width: 100%;
+    height:100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
+}
+  
+.image-overlay{
+    width: 100%;
+    height: 100vh;
+
+    background-color:  rgba(255, 200, 100, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : white;
+    letter-spacing: 5px;
+    font-size: 3rem;
+} */
