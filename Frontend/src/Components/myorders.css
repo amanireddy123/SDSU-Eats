@@ -1,0 +1,72 @@
+/* orders.css */
+
+.orders-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #b34e67;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .orders-heading {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .order-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-item {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .order-item-name {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .order-item-quantity,
+  .order-item-total {
+    color: #555;
+  }
+  
+  .order-total-price {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #333;
+  }
+  
+  .estimated-time {
+    margin-top: 20px;
+  }
+  
+  .estimated-time-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .countdown-timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6347; /* Tomato color */
+  }
+  
+  .no-orders-message {
+    color: #555;
+    margin-top: 20px;
+  }
+  

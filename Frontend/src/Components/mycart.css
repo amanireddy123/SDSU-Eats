@@ -1,0 +1,60 @@
+/* MyCart.css (example file name) */
+
+.my-cart-container {
+  max-width: 600px;
+  margin: 100px auto; /* Add margin to move elements down */
+  padding: 30px;
+  text-align: center;
+}
+
+.my-cart-heading {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+  
+  .item-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .item {
+    background-color: #f8f8f8; /* Card background color */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .item-name {
+    font-weight: bold;
+  }
+  
+  .item-quantity,
+  .item-total {
+    color: #555;
+  }
+  
+  .total-price {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  .proceed-to-payment-btn {
+    background-color: red; /* Tomato color */
+    color: #fff;
+    padding: 15px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    width: 100%; /* Button width to span the container */
+  }
+  
+  .proceed-to-payment-btn:hover {
+    background-color: #d43f3a; /* Darker shade on hover */
+  }
+  
