@@ -1,11 +1,8 @@
-/// Import necessary modules
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import './register.css';
 import './style.css';
-
-// Import the user data (replace with your actual path)
-import userData from './users.json';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -24,65 +21,87 @@ const Register = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Simple form validation
-    const newErrors = {};
-    if (!formData.firstName.trim()) {
-      newErrors.firstName = 'First Name is required';
-    }
-    if (!formData.lastName.trim()) {
-      newErrors.lastName = 'Last Name is required';
-    }
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Invalid email address';
-    }
-    if (!formData.password.trim()) {
-      newErrors.password = 'Password is required';
-    } else if (formData.password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters long';
-    }
-    if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match';
-    }
-    if (!formData.studentId.trim()) {
-      newErrors.studentId = 'Student ID is required';
+    // Perform form validation
+    const validationErrors = validateForm(formData);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
     }
 
-    if (Object.keys(newErrors).length === 0) {
-      // Check if the user already exists
-      const existingUser = userData.users.find(
-        (user) => user.email === formData.email
+    try {
+      const response = await axios.post(
+        'http://localhost:8000/api/register/',
+        {
+          username: formData.email,
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          password: formData.password,
+          student_id: formData.studentId,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
       );
 
-      if (existingUser) {
-        setErrors({ email: 'User with this email already exists' });
-      } else {
-        // If no errors and the user doesn't exist, add the new user
-        const newUser = {
-          id: userData.users.length + 1,
-          username: formData.email, // Assuming email can be used as a username
-          password: formData.password,
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          studentId: formData.studentId,
-        };
-
-        // Update the user data
-        userData.users.push(newUser);
-
-        // Navigate to the home page
+      if (response.status === 201) {
+        console.log('Registration successful');
         navigate('/login');
+      } else {
+        console.log('Registration failed:', response.data);
+        // Handle registration error
+        setErrors(response.data);
       }
-    } else {
-      // If there are errors, update the state
-      setErrors(newErrors);
+    } catch (error) {
+      console.error('Error during registration:', error.response.data);
+      // Handle other errors (e.g., network issues)
     }
   };
+
+  const validateForm = (data) => {
+    const errors = {};
+
+    if (!data.firstName.trim()) {
+      errors.firstName = 'First Name is required';
+    }
+
+    if (!data.lastName.trim()) {
+      errors.lastName = 'Last Name is required';
+    }
+
+    if (!data.email.trim()) {
+      errors.email = 'Email is required';
+    } else if (!isValidEmail(data.email)) {
+      errors.email = 'Invalid email format';
+    }
+
+    if (!data.password.trim()) {
+      errors.password = 'Password is required';
+    }
+
+    if (data.password !== data.confirmPassword) {
+      errors.confirmPassword = 'Passwords do not match';
+    }
+
+    if (!data.studentId.trim()) {
+      errors.studentId = 'Student ID is required';
+    }
+
+    return errors;
+  };
+
+  const isValidEmail = (email) => {
+    // Use a regular expression or any other method to check the email format
+    // For simplicity, this example checks if there's an "@" symbol
+    return email.includes('@');
+  };
+
+
+  
 
 
   return (

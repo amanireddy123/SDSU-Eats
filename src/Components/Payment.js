@@ -1,5 +1,3 @@
-// PaymentPage.js
-
 import React, { useState } from 'react';
 import './payment.css';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -60,6 +58,7 @@ const PaymentPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     // Perform form submission or additional validation here
 
     if (isFormValid()) {
@@ -67,17 +66,17 @@ const PaymentPage = () => {
       navigate('/myorders', { state: { itemsData, totalPrice } });
     } else {
       setErrors({
-        name: 'Name is required',
-        email: 'Email is required',
-        address: 'Address is required',
-        city: 'City is required',
-        state: 'State is required',
-        zip: 'Zip Code is required',
-        cardName: 'Name on Card is required',
-        cardNum: 'Credit Card Number is required',
-        expMonth: 'Expiration Month is required',
-        expYear: 'Expiration Year is required',
-        cvv: 'CVV is required',
+        name: formData.name ? '' : 'Name is required',
+        email: formData.email ? '' : 'Email is required',
+        address: formData.address ? '' : 'Address is required',
+        city: formData.city ? '' : 'City is required',
+        state: formData.state ? '' : 'State is required',
+        zip: formData.zip ? '' : 'Zip Code is required',
+        cardName: formData.cardName ? '' : 'Name on Card is required',
+        cardNum: formData.cardNum ? '' : 'Credit Card Number is required',
+        expMonth: formData.expMonth ? '' : 'Expiration Month is required',
+        expYear: formData.expYear ? '' : 'Expiration Year is required',
+        cvv: formData.cvv ? '' : 'CVV is required',
       });
     }
   };
@@ -282,8 +281,7 @@ const PaymentPage = () => {
           type="submit"
           value="Proceed to Checkout"
           className="payment-submit_btn"
-          disabled={!isFormValid()}
-          onClick={handleSubmit}
+          // disabled={!isFormValid()}
         />
       </form>
     </div>

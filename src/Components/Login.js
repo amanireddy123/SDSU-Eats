@@ -1,7 +1,6 @@
-// Login.js
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import usersData from './users.json';
+import axios from 'axios';
 import './login.css';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,7 +19,7 @@ const Login = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const newErrors = {};
@@ -31,24 +30,34 @@ const Login = () => {
       newErrors.password = 'Password is required';
     }
 
-    const user = usersData.users.find(u => u.username === formData.username && u.password === formData.password);
+    try {
+      const response = await axios.post(
+        'http://localhost:8000/api/login/',
+        {
+        username: formData.username,  // Assuming email is used as the username
+        password: formData.password,
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+      );
 
-    if (!user) {
+      console.log(response.status);
+      navigate('/home', { state: { username: formData.username } });
+  
+    } catch (error) {
+      
+      console.error('Login failed:', error.response?.data?.error || 'Unknown error');
       newErrors.login = 'Invalid username or password';
     }
 
-    if (Object.keys(newErrors).length === 0) {
-      console.log('Login successful');
-
-
-      // Redirect to the homepage with the username as state
-      navigate('/home', { state: { username: user.username } });
-      window.location.reload();
-
-      // You can also perform other actions after successful login
-    } else {
-      setErrors(newErrors);
-    }
+    // if (Object.keys(newErrors).length === 0) {
+    //   // You can also perform other actions after successful login
+    // } else {
+    //   setErrors(newErrors);
+    // }
   };
 
   return (

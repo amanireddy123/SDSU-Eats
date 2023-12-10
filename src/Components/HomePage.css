@@ -99,6 +99,66 @@ body {
     background-position: center;
     background-repeat: no-repeat;
   }
+  .starbucks-area {
+    height: 80vh;
+    max-height: 100vh;
+    background: linear-gradient(
+        rgba(240, 240, 240, 0.04),
+        rgba(255, 255, 255, 0.336)
+      ),
+      url("../images/sturbuks-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .chipotle-area {
+    height: 80vh;
+    max-height: 100vh; /* Set a maximum height */
+    background: linear-gradient(
+        rgba(240, 240, 240, 0.04),
+        rgba(255, 255, 255, 0.336)
+      ),
+      url("../images/chipotle.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.Habbit-area {
+  height: 80vh;
+  max-height: 100vh; /* Set a maximum height */
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.04),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("../images/habbit.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.halal-area {
+  height: 80vh;
+  max-height: 100vh; /* Set a maximum height */
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.04),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("../images/halal.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.wendy-area {
+  height: 100vh;
+  max-height: 120vh; /* Set a maximum height */
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.04),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("../images/wendys.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
   .showcase-container {
     display: flex;
     flex-direction: column;

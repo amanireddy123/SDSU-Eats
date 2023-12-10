@@ -110,7 +110,7 @@ body {
         rgba(240, 240, 240, 0.04),
         rgba(255, 255, 255, 0.336)
       ),
-      url("../images/sturbucks.jpeg");
+      url("../images/sturbuks-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -208,24 +208,88 @@ body {
 }
 
   /*///////////////*/
-  /* ... existing CSS ... */
 
-/* Set the background color of the section to black */
-#food-menu {
+  .popular-food-menu-heading {
+    text-align: center;
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: #e2d6d6;
+  }
+  .popular-food-menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px;
+  }
+  .popular-food-menu-container img {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .popular-food-menu-item {
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+  }
+  .popular-food-description {
+    margin: auto 1.5rem;
+  }
+  .popular-font-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #444;
+  }
+  .popular-food-description p {
+    font-size: 1.4rem;
+    color: #555;
+    font-weight: 500;
+  }
+  .popular-food-description p, .food-titile {
+    color: white; /* Change font color to white */
+}
+
+  #popular-food-menu {
     background-color: black;
     padding: 2rem 0;
 }
 
+.popular-food-menu-item {
+    flex: 1 1 calc(50% - 1rem); /* Adjust the flex basis to fit two items per row */
+    box-sizing: border-box;
+    padding: 1rem;
+    color: white;  /* Change font color to white to make it visible against black background */
+}
+
+.popular-food-description .food-price {
+  color: #117964;
+  font-weight: 700;
+}
+  /* ... existing CSS ... */
+
+/* Set the background color of the section to black */
+#food-menu {
+    background-color: rgb(233, 212, 212);
+    padding: 2rem 0;
+}
+
 .food-menu-item {
-  display: flex;
-  justify-content: space-between; /* Distribute items evenly horizontally */
-  align-items: flex-start; /* Align items to the top vertically */
-  margin-bottom: 3rem;
-  padding: 0 10px; /* Add horizontal padding */
+  flex: 1 1 calc(50% - 1rem); /* Adjust the flex basis to fit two items per row */
+  box-sizing: border-box;
+  padding: 0.2rem 0.1rem 0.2rem 0.1rem;
+  color: white;
+  /* Change font color to white to make it visible against black background */
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  overflow: hidden; /* Hide overflow content to avoid sharp corners */
+  background-color: #333; /* Add background color for the tile */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  margin: 0 10px 20px 10px; /* Adjust margins for spacing */
 }
 
 .food-menu-container {
-    justify-content: space-between; /* Distribute the items evenly */
+  justify-content: space-between; /* Distribute the items evenly */
 }
 
 .food-menu-item {
@@ -355,7 +419,8 @@ body {
 
 .review-section {
     flex: 1;  /* Allow reviews to grow and take up equal width */
-    border: 1px solid #e0e0e0;
+    border: 1px solid #5a5858;
+    background-color: #bd77774d;
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -383,17 +448,17 @@ body {
 
 .review-message {
     font-size: 16px;
-    color: #333;
+    color: #6b4343;
 }
 
 .footer {
-    background-color: #000;
+    background-color: #221515;
     color: #fff;
     padding: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 0px;
 }
 
 .contact-section {

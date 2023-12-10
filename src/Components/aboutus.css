@@ -17,7 +17,7 @@ body{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    margin: 20px auto;
+    margin: 90px 40px 30px 40px ;
 }
 
 .heading h1{
@@ -138,6 +138,8 @@ body{
 }
 
 .bottomnavbar{
+    max-width: 1200px; /* Adjust the max-width as needed */
+    margin: 0 auto;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -158,6 +160,10 @@ body{
 .bottomnavbar a:hover {
     background-color: #ddd;
     color: black;
+}
+.bottomnavbar .login-link {
+    float: right; /* Align the login link to the right */
+    margin-right: 20px; /* Adjust the margin for spacing */
 }
 
 .logo {
@@ -202,3 +208,44 @@ body{
 }
 
 
+.footer {
+    background-color: #221515;
+    color: #fff;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.phone {
+    font-family: 'Courier New', Courier, monospace;  /* Different font style for phone */
+    margin: 0;
+}
+
+.email {
+    font-family: 'Arial', sans-serif;  /* Different font style for email */
+    margin: 0;
+}
+
+.phone span, .email span {
+    color: #f5a623;  /* Highlight color for phone and email details */
+}
+
+.copyright {
+    margin-right: 20px;
+}

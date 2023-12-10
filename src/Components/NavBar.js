@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top " style={{ padding: '10px'}}>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top " style={{ padding: '35px'}}>
         <div className="container-fluid">
           <Link className="navbar-brand" to="/home">
             SDSUEats

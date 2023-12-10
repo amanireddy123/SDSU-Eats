@@ -17,96 +17,90 @@ const Index1 = () => {
           <a href="#restaurant-list" className="btn btn-primary">Find Restaurants</a>
         </div>
       </section>
-      <section id="food-menu">
-      <h2 className="food-menu-heading">Most Popular Foods</h2>
-      <div className="food-menu-container container">
+      <section id="popular-food-menu">
+      <h2 className="popular-food-menu-heading">Most Popular Foods</h2>
+      <div className="popular-food-menu-container container">
         {/* Food Menu Item 1 */}
-        <div className="food-menu-item">
+        <div className="popular-food-menu-item">
           <div className="food-img">
-            <img src={require("../images/coke.jpg")} alt="" />
+            <img src={require("../starbucks/item3")} alt="" />
           </div>
-          <div className="food-description">
-            <h2 className="food-title">Food Menu Item 1</h2>
+          <div className="popular-food-description">
+            <h2 className="food-title">Machiato starbucks</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-              quae.
+            Rich espresso with vanilla-flavored syrup and steamed milk, topped with caramel drizzle.
             </p>
-            <p className="food-price">Price: 10$</p>
+            <p className="food-price">Price: 5.99$</p>
           </div>
         </div>
 
         {/* Food Menu Item 2 */}
-        <div className="food-menu-item">
+        <div className="popular-food-menu-item">
           <div className="food-img">
-            <img src={require("../images/Burrito.JPG")} alt="error" />
+            <img src={require("../chipotle/item2")} alt="error" />
           </div>
-          <div className="food-description">
-            <h2 className="food-title">Food Menu Item 2</h2>
+          <div className="popular-food-description">
+            <h2 className="popular-food-title">Guacamole Chipotle</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-              quae.
+            Creamy avocado goodness with zesty lime and spices, elevating your Chipotle bowl experience.
             </p>
-            <p className="food-price">Price: 10$</p>
+            <p className="food-price">Price: 3.49$</p>
           </div>
         </div>
 
         {/* Food Menu Item 3 */}
-        <div className="food-menu-item">
+        <div className="popular-food-menu-item">
           <div className="food-img">
             <img src={require("../images/chicken.jpg")} alt="" />
           </div>
-          <div className="food-description">
-            <h2 className="food-title">Food Menu Item 3</h2>
+          <div className="popular-food-description">
+            <h2 className="popular-food-title">Fried Chiecken Halal</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-              quae.
+            Crispy and flavorful fried chicken, perfectly seasoned  for a delightful and satisfying taste experience.
             </p>
             <p className="food-price">Price: 10$</p>
           </div>
         </div>
 
         {/* Food Menu Item 4 */}
-        <div className="food-menu-item">
+        <div className="popular-food-menu-item">
           <div className="food-img">
             <img src={require("../images/salad.jpg")}alt="" />
           </div>
-          <div className="food-description">
-            <h2 className="food-title">Food Menu Item 4</h2>
+          <div className="popular-food-description">
+            <h2 className="popular-food-title">Salad Chipotle</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-              quae.
+            A refreshing mix of crisp greens, vibrant vegetables, and flavorful dressings for a healthy and delicious meal.
             </p>
-            <p className="food-price">Price: 10$</p>
+            <p className="food-price">Price: 5.9$</p>
           </div>
         </div>
 
         {/* Food Menu Item 5 */}
-        <div className="food-menu-item">
+        <div className="popular-food-menu-item">
           <div className="food-img">
             <img src={require("../images/pizza.jpg")} alt="" />
           </div>
-          <div className="food-description">
-            <h2 className="food-title">Food Menu Item 5</h2>
+          <div className="popular-food-description">
+            <h2 className="popular-food-title">Chicken Pizza Wendys</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-              quae.
+            Indulge in the perfect fusion of succulent chicken and savory toppings atop a crispy pizza crust, delivering a delicious harmony of flavors in every slice.
             </p>
-            <p className="food-price">Price: 10$</p>
+            <p className="food-price">Price: 7.49$</p>
           </div>
         </div>
 
         {/* Food Menu Item 6 */}
-        <div className="food-menu-item">
+        <div className="popular-food-menu-item">
           <div className="food-img">
-            <img src={require("../images/jucie.jpg")} alt="" />
+            <img src={require("../wendy/item1")} alt="" />
           </div>
-          <div className="food-description">
-            <h2 className="food-title">Food Menu Item 6</h2>
+          <div className="popular-food-description">
+            <h2 className="popular-food-title">Baconator Wendys</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-              quae.
+            A delicious and hearty burger loaded with bacon, cheese, and Wendy's signature beef patty.
             </p>
-            <p className="food-price">Price: 10$</p>
+            <p className="food-price">Price: 6.89$</p>
           </div>
         </div>
       </div>
@@ -127,9 +121,9 @@ const Index1 = () => {
                     </h2>
                     
                     <p>
-                        Description for Restaurant 1. Lorem ipsum dolor sit amet.
+                    Savor the rich aroma and delightful flavors of our meticulously crafted Starbucks coffee, a comforting blend that awakens your senses with every sip
                     </p>
-                    <p className="restaurant-location">Location: XYZ Street</p>
+                    <p className="restaurant-location">Location: Aztec Student Union</p>
                 </div>
             </div>
           
@@ -140,12 +134,12 @@ const Index1 = () => {
                     </div>
                     <div className="restaurant-description">
                         <h2 className="restaurant-title">
-                           <Link to="/starbucks">chipotle</Link>
+                           <Link to="/chipotle">chipotle</Link>
                         </h2>
                         <p>
-                            Description for Restaurant 1. Lorem ipsum dolor sit amet.
+                        Experience a customizable delight with our Chipotle offerings—a fusion of proteins, fresh toppings, and flavorful choices tailored to your taste.
                         </p>
-                        <p className="restaurant-location">Location: XYZ Street</p>
+                        <p className="restaurant-location">Location: Aztec Student Union</p>
                     </div>
                 </div>
 
@@ -156,12 +150,12 @@ const Index1 = () => {
                     </div>
                     <div className="restaurant-description">
                         <h2 className="restaurant-title">
-                             <Link to="/starbucks">Habbit Grill</Link> 
+                             <Link to="/habbitgrill">Habbit Grill</Link> 
                         </h2>
                         <p>
-                            Description for Restaurant 1. Lorem ipsum dolor sit amet.
+                        Indulge in a wholesome culinary experience at Habbit Grill, where fresh ingredients and bold flavors come together for a delightful meal.
                         </p>
-                        <p className="restaurant-location">Location: XYZ Street</p>
+                        <p className="restaurant-location">Location:SDSU West commons</p>
                     </div>
                 </div>
 
@@ -172,12 +166,12 @@ const Index1 = () => {
                     </div>
                     <div className="restaurant-description">
                         <h2 className="restaurant-title">
-                             <Link to="/starbucks">Hallal Shack</Link> 
+                             <Link to="/halal">Hallal Shack</Link> 
                         </h2>
                         <p>
-                            Description for Restaurant 1. Lorem ipsum dolor sit amet.
+                        Savor the fusion of diverse flavors at Halal Shack, offering a delectable selection of halal dishes for a satisfying and unique dining experience.
                         </p>
-                        <p className="restaurant-location">Location: XYZ Street</p>
+                        <p className="restaurant-location">Location:SDSU East commons</p>
                     </div>
                 </div>
 
@@ -187,12 +181,12 @@ const Index1 = () => {
                     </div>
                     <div className="restaurant-description">
                         <h2 className="restaurant-title">
-                             <Link to="/starbucks">Wendy's</Link>
+                             <Link to="/wendy">Wendy's</Link>
                         </h2>
                         <p>
-                            Description for Restaurant 1. Lorem ipsum dolor sit amet.
+                        Indulge in Wendy's signature tastes, where fresh ingredients and bold flavors come together in every bite for a delightful fast-food experience.
                         </p>
-                        <p className="restaurant-location">Location: XYZ Street</p>
+                        <p className="restaurant-location">Location:Aztec Student Union</p>
                     </div>
                 </div>    
           </div>
@@ -248,11 +242,9 @@ const Index1 = () => {
             <p className="small">Why people love us?</p>
             <h2>We've been making healthy food last for 10 years</h2>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ab
-              eos omnis, nobis dignissimos perferendis et officia architecto,
-              fugiat possimus eaque qui ullam excepturi suscipit aliquid optio,
-              maiores praesentium soluta alias asperiores saepe commodi
-              consequatur? Perferendis est placeat facere aspernatur!
+              SDSU EATS project is started to provide easy access to food to the students around the campus.
+              You don't need to wait in line for food anymore. You can work on your assignments while we take
+              care of your meal
             </p>
           </div>
           <div className="about-img">

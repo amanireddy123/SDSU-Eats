@@ -9,13 +9,20 @@ import Items1 from './Components/items1.js';
 import MyCart from './Components/MyCart.js';
 import Payment from './Components/Payment'
 import Register from './Components/Register';
+import Chipotle from './Components/chipotle.js';
+import HabbitGrill from './Components/habbitgrill.js';
+import Halal from './Components/halal.js';
+import Wendys from './Components/wendy.js';
+import ScrollToTop from './scroll.js';
 
 function App() {
+  <ScrollToTop />
   return (
     <Router>
       <Routes>
         {/* Navbar included in routes where it should be displayed */}
         <Route path="/" element={<>
+          <ScrollToTop />
           <Login />
         </>} />
         <Route path='/home' element={<>
@@ -30,10 +37,35 @@ function App() {
           <Navbar />
           <Orders />
         </>} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={
+        <>
+        <ScrollToTop />
+        <Login />
+        </>} />
         <Route path="/starbucks" element={<>
           <Navbar />
           <Items1 />
+          <ScrollToTop />
+        </>} />
+        <Route path="/chipotle" element={<>
+        <Navbar />
+        <Chipotle />
+        <ScrollToTop />
+        </>} />
+        <Route path="/habbitgrill" element={<>
+        <Navbar />
+        <HabbitGrill />
+        <ScrollToTop />
+        </>} />
+        <Route path="/halal" element={<>
+        <Navbar />
+        <Halal />
+        <ScrollToTop />
+        </>} />
+        <Route path="/wendy" element={<>
+        <Navbar />
+        <Wendys />
+        <ScrollToTop />
         </>} />
         <Route path="/MyCart" element={<>
           <Navbar />
